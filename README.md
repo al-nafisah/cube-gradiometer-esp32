@@ -11,7 +11,12 @@ A 3D view of the 3 cm cube with the magnetic field vector drawn on each of the f
 ## Hardware
 An ESP32 drives a TCA9548A multiplexer over I2C, which fans out to four BMM350 breakouts on channels 2 to 5, all sharing address 0x14.
 
-![](docs/system.png)
+The head, the 3 cm cube on a printed stem with a twisted four-wire lead from each sensor, and the same head wired to the ESP32 and the mux on a perfboard.
+
+<p>
+  <img src="docs/head.jpg" alt="The gradiometer head: a printed stem with a BMM350 breakout on its end and a twisted four-wire lead from each of the four sensors" width="48%">
+  <img src="docs/wired.jpg" alt="The head connected by four twisted leads to a perfboard carrying an ESP32 dev board and a TCA9548A multiplexer breakout, powered over USB" width="48%">
+</p>
 
 ESP32-D0WDQ6, TCA9548A, 4 × Fermion [BMM350](https://wiki.dfrobot.com/SKU_SEN0622_Fermion_BMM350_Triple_Axis_Magnetometer_Sensor).
 All four sensors sit at `0x14`; the mux is what separates them. Leave ADSEL alone.
